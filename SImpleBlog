@@ -1,0 +1,26 @@
+function App(){
+    const title = 'A.k Blog'
+    const body = 'Learning phase going on for the better future'
+    const comments = [
+        {id : 1, text : 'Comment 1'},
+        {id : 2, text : 'Comment 2'},
+        {id : 3, text : 'Comment 3'},
+    ]
+    const showComments = true
+    const commentBlock = (
+        <ul> {
+            comments.map((comment,index) =>
+            (<li key={index}>{comment.text}</li>))}
+        </ul>
+    )
+    return (
+        <>
+        <h1>Welcome to {title}</h1>
+        <p>{body}</p>
+        {showComments && commentBlock}
+        </>
+
+    )
+}
+
+export default App
